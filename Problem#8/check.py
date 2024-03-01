@@ -1,3 +1,8 @@
+"""
+    Name: Luke Runnels
+    Lab Time: 3/1/2024
+"""
+
 def in_order(nums):
     # Type your code here.
     

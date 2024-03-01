@@ -1,3 +1,8 @@
+"""
+    Name: Luke Runnels
+    Lab Time: 3/1/2024
+"""
+
 def filter_and_print_range(input_list, min_val, max_val):
     #write your code here
 

@@ -1,3 +1,8 @@
+"""
+    Name: Luke Runnels
+    Lab Time: 3/1/2024
+"""
+
 def process_input(input_string):
       # Split into separate strings
 
