@@ -5,14 +5,14 @@ from contactlist import process_user_contacts
 class TestProcessUserContacts(unittest.TestCase):
 
     def test_contact_found(self):
-        user_input = "Alice 123456 Bob 789012"
+        user_input = "Alice,123456 Bob,789012"
         with patch('builtins.input', side_effect=["Bob"]):
             with patch('builtins.print') as mock_print:
                 process_user_contacts(user_input)
                 mock_print.assert_called_once_with("789012")
 
     def test_contact_not_found(self):
-        user_input = "Alice 123456 Bob 789012"
+        user_input = "Alice,123456 Bob,789012"
         with patch('builtins.input', side_effect=["Charlie"]):
             with patch('builtins.print') as mock_print:
                 process_user_contacts(user_input)

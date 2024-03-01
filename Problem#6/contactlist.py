@@ -4,16 +4,23 @@
 """
 
 def process_user_contacts(user_input):
-    user_contacts = 0
 
- 
-    user_input = 0
-    tokens = 0
-
-    # Put word pairs into a dictionary
+    nameAndPhoneTokens = user_input.split(" ")
+    nameAndPhoneDict = {}
     
+    for nameAndPhoneToken in nameAndPhoneTokens:
+        nameToken = nameAndPhoneToken.split(",")[0]
+        phoneToken = nameAndPhoneToken.split(",")[1]
+
+        nameAndPhoneDict[nameToken] = phoneToken
+         
     # Get contact name from input, output contact's phone number
     contact_name = input("Enter the contact name: ")
+    if (nameAndPhoneDict.get(contact_name) is None):
+        print("Contact not found.")
+    else:
+        print(nameAndPhoneDict[contact_name])
+        
     
    
 if __name__ == '__main__':
