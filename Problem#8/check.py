@@ -5,6 +5,7 @@
 
 def in_order(nums):
     # Type your code here.
+    filler = 0
     
 if __name__ == '__main__':
     # Test out-of-order example
