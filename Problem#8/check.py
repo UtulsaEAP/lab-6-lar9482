@@ -5,7 +5,15 @@
 
 def in_order(nums):
     # Type your code here.
-    filler = 0
+    prevNum = nums[0]
+
+    for i in range (1, len(nums)):
+        if (nums[i] <= prevNum):
+            return False
+        
+        prevNum = nums[i]
+    
+    return True
     
 if __name__ == '__main__':
     # Test out-of-order example
