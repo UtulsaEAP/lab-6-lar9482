@@ -4,14 +4,18 @@
 """
 
 def process_input(input_string):
-      # Split into separate strings
+    # Split into separate strings
 
+    floatTokens = input_string.split(" ")
     # Convert strings to floats
     
+    floatNums = []
+    for floatToken in floatTokens:
+        floatNums.append(float(floatToken))
 
     # Get max and average
-    max_value = 0
-    average_value = 0 
+    max_value = max(floatNums)
+    average_value = sum(floatNums) / len(floatNums)
     return max_value, average_value
 
 if __name__ == "__main__":
