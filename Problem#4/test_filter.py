@@ -19,6 +19,7 @@ class TestProcessAndPrint(unittest.TestCase):
         sys.stdout = sys.__stdout__
 
         # Check if the output matches the expected output
+        originalOutput = captured_output.getvalue()
         self.assertEqual(captured_output.getvalue(), expected_output)
 
     def test_negative_input(self):
